@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<htmL>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID GALLERY</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #ff008c;
+        font-family: Arial, sans-serif;
+      }
+  
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 800px;
+        margin: auto;
+      }
+  
+      .gallery-item {
+        flex: 0 0 33.33%;
+        box-sizing: border-box;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-self: start;
+        justify-content: center;
+        flex-direction: column;
+      }
+  
+      .gallery-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        transition: transform 0.3s;
+        cursor: pointer;
+      }
+  
+      .gallery-item img:hover {
+        transform: scale(1.1);
+      }
+  
+      .caption {
+        text-align: center;
+        margin-top: 10px;
+        color: #ffffff;
+      }
+  
+      button {
+        color: #000000;
+        font-size: medium;
+        cursor: pointer;
+        background-color: #dad6d0;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+      }
+  
+      button:hover {
+        background-color: #cf1898;
+      }
+      @media only screen and (min-width: 33.75em){
+    .gallery-item{
+      flex-basis: calc(50% - 2rem);
+    }
+  }
+  @media only screen and (min-width: 48em){
+    .gallery-item{
+      flex-basis: calc((100% / 3) - 2rem);
+    }
+  }
+  @media only screen and (min-width: 60em){
+    .gallery-item{
+      flex-basis: calc((100% / 4) - 2rem);
+    }
+  }
+  @media only screen and (min-width: 72em){
+    .gallery-item{
+        flex-basis: calc((100% / 5) - 2rem);
+    }
+  }
+    </style>
+  </head>
+  
+<body>
+
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="https://i.pinimg.com/236x/bb/e3/43/bbe3438422556dbdc46c5612379df437.jpg" alt="JENNIE">
+      <p class="caption">JENNIE</p></br>
+      <button type="button">click</button>
+    </div>
+    <div class="gallery-item">
+      <img src="https://i.pinimg.com/236x/f5/f1/c1/f5f1c160fb3f59e307f1d643e52fd897.jpg" alt="Image 2">
+      <p class="caption">NAYEON</p>
+      <button type="button">click</button>
+    </div>
+    <div class="gallery-item">
+        <img src="https://i.pinimg.com/236x/29/7b/4f/297b4f016b2a881e881ea02b607c1e07.jpg" alt="Image 3">
+        <p class="caption">IRENE</p>
+        <button type="button">click</button>
+    </div>
+    <div class="gallery-item">
+        <img src="https://i.pinimg.com/236x/2c/97/3d/2c973d470bc1c96640f1534c7d4fc34c.jpg" alt="Image 1">
+        <p class="caption">SOWON</p>
+        <button type="button">click</button>
+    </div>
+      <div class="gallery-item">
+        <img src="https://i.pinimg.com/236x/be/7a/31/be7a31141d0e71c5c1178821f9b7e782.jpg" alt="Image 1">
+        <p class="caption">JOY</p>
+        <button type="button">click</button>
+    </div>
+      <div class="gallery-item">
+        <img src="https://i.pinimg.com/236x/7d/4a/ca/7d4acaef9497bea073ea5fe7f64bcae8.jpg" alt="Image 1">
+        <p class="caption">JISOO</p>
+        <button type="button">click</button>
+    </div>
+      <div class="gallery-item">
+        <img src="https://i.pinimg.com/236x/cf/1d/ae/cf1daebe492bb77bc0338b6e9c40bf96.jpg" alt="Image 1">
+        <p class="caption">JISOO</p>
+        <button type="button">click</button>
+    </div>
+      <div class="gallery-item">
+        <img src="https://i.pinimg.com/236x/cc/38/2b/cc382b9a4cde43ff83c4c35efaafbdd7.jpg" alt="Image 1">
+        <p class="caption">JENNIE</p>
+        <button type="button">click</button>
+    </div>
+      <div class="gallery-item">
+        <img src="https://i.pinimg.com/236x/91/8f/7b/918f7b5972771ba763e63ffd4353aab9.jpg" alt="Image 1">
+        <p class="caption">ROSIE</p>
+        <button type="button">click</button>
+    </div>
+    <div class="gallery-item">
+      <img src="https://i.pinimg.com/736x/97/e6/b8/97e6b80e1ca85e4a4da7c6813c7c70b0.jpg" alt="Image 1">
+      <p class="caption">JENNIE</p>
+      <button type="button">click</button>
+  </div>
+  <div class="gallery-item">
+    <img src="https://i.pinimg.com/736x/3c/d6/ab/3cd6ab69ff482f2c615db10daccaf303.jpg" alt="Image 1">
+    <p class="caption">LISA</p>
+    <button type="button">click</button>
+</div>
+<div class="gallery-item">
+  <img src="https://i.pinimg.com/236x/ab/bf/7c/abbf7c088f09b446fafe654331f019f2.jpg" alt="Image 1">
+  <p class="caption">JENNIE</p>
+  <button type="button">click</button>
+</div>
+<div class="gallery-item">
+  <img src="https://i.pinimg.com/236x/5c/28/d6/5c28d6c0dfd701794ef375919f835b06.jpg" alt="Image 1">
+  <p class="caption">BLACKPINK</p>
+  <button type="button">click</button>
+</div>
+<div class="gallery-item">
+  <img src="https://i.pinimg.com/236x/58/36/e9/5836e906cdc5318e0aa541b141e60709.jpg" alt="Image 1">
+  <p class="caption">TWICE</p>
+  <button type="button">click</button>
+</div>
+<div class="gallery-item">
+  <img src="https://i.pinimg.com/236x/7b/3a/ce/7b3ace30f70e5f2c7bfa5bb8ca3ed635.jpg" alt="Image 1">
+  <p class="caption">BLACKPINK</p>
+  <button type="button">click</button>
+</div>
+<div class="gallery-item">
+  <img src="https://i.pinimg.com/236x/5d/7b/04/5d7b04328c6bd8225778079b138b802b.jpg" alt="Image 1">
+  <p class="caption">GFRIEND</p>
+  <button type="button">click</button>
+</div>
+<div class="gallery-item">
+  <img src="https://i.pinimg.com/236x/ae/2b/e3/ae2be3bce2b59d693294704915cf307d.jpg" alt="Image 1">
+  <p class="caption">BLACKPINK</p>
+  <button type="button">click</button>
+</div>
+<div class="gallery-item">
+  <img src="https://i.pinimg.com/736x/6f/2f/fb/6f2ffbd6e0573f11fc331e9782796261.jpg" alt="Image 1">
+  <p class="caption">RED VELVET</p>
+  <button type="button">click</button>
+</div>
+
+  </div>
+
+</body>
+</html
