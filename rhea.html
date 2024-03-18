@@ -1,154 +1,128 @@
 <!DOCTYPE html>
-<html>
-<head>
-<style>
-.flex-container {
-  display: flex;
-  background-color:palevioletred;
+<html lang="en">
+    <head>
+        <title>Registration Page</title> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <style>
+            body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(240, 73, 190);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    height: 100vh;
 }
 
-.flex-container > div {
-  background-color: #ac3a7c;
-  margin: 10px;
-  padding: 20px;
-  font-size: 5px;
-}
-
-
-.flex-container img{
-  width: 100%;
-  height: 200px;
-}
-</style>
-<style>
-.flex-container {
-  display: flex;
-  background-color: palevioletred;
-}
-
-.flex-container > div {
-  background-color: #ac3a7c;
-  margin: 10px;
-  padding: 20px;
-  font-size: 30px;
-}
-
-.flex-container img{
-  width: 100%;
-  height: 300px;
+form {
+    background-color:transparent;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(33, 58, 199, 0.5);
+    backdrop-filter: blur(15px);
+    width: 50%;
 }
 
 
-</style>
-
-<style>
-
-.flex-container {
-  display: flex;
-  background-color: rgb(252, 91, 225);
+h2 {
+    text-align: center;
+    color:black;
 }
 
-.flex-container > div {
-  background-color: #f1f1f1;
-  margin: 10px;
-  padding: 20px;
-  font-size: 30px;
-}
-.flex-container img{
-  width: 100%;
-  height: 200px;
-}
-</style>
-<style>
-.flex-container {
-  display: flex;
-  background-color: rgb(255, 106, 181);
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #000000;
 }
 
-.flex-container > div {
-  background-color: #ffffff;
-  margin: 10px;
-  padding: 20px;
-  font-size: 5px;
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid slateblue;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
-
-.flex-container img{
-  width: 100%;
-  height: 200px;
+input[type="submit"] {
+    background-color: #23b9be;
+    color: #fff;
+    cursor: pointer;
 }
 
+input[type="submit"]:hover {
+    background-color: #23b9be;
+}
 
+.error {
+    color: #f00;
+    margin-top: 10px;
+}
+        </style>
 
+<form method="post" action="rhea.php">
+    <h2>
+        Registration Form
+    </h2>
+    <label for="user_name">Username:</label>
+    <input type="text" name="user_name" required><br>
 
-</style>
+    <label for="first_name">First Name:</label>
+    <input type="text" name="first_name" required><br>
 
-</head>
-<body>
+    <label for="middle_name">Middle Name:</label>
+    <input type="text" name="middle_name" required><br>
 
-<h1>CSS FLEXBOX GALLERY</h1>
+    <label for="last_name">Last Name:</label>
+    <input type="text" name="last_name" required><br>
 
-<div class="flex-container">
-  <div>
-    
-<img src="https://media.starbiz.net/editors/1/2021/01/16/JdZKetvhrXLFYJNhYnD6uAB5kmkIiP2phcuxP8rb.jpeg" alt="">
-  </div>
-  <div>
-<img src="https://wallpaperboat.com/wp-content/uploads/2020/10/04/55595/baby-pink-02.jpg" alt="">
-  </div>
-  <div>
-<img src="https://lh3.googleusercontent.com/Lf5ehd7bTlLXrqmJQK5I4ODpmiHxpzppdXQaeKoHCCx10MZbDo3fvGWIAXRYuW9dXPCEExlZf4VEex5CkPSY_8RrD6BGQauJcQ=w960-rj-nu-e365" alt="">
-  </div>
-<div>
-<img src="https://i.pinimg.com/originals/9a/55/b4/9a55b4c8389146572f98c5d5a90613d7.jpg" alt="">
+    <label for="gender">Gender:</label>
+    <select name="gender" required>
+        <option value="female">Female</option>
+        <option value="male">Male</option>
+        
+    </select>
+    <br>
+    <label for="birthdate">Birthdate:</label>
+    <input type="date" name="birthdate"  onchange="calculateAge()"required>
+    <br>
+    <label for="age"><A>Age<A></A></A>:</label>
+    <input type="text" id="age" name="Age" readonly><br>
 
-</div>
-<div>
-<img src="https://1.bp.blogspot.com/-C9najvMgTfg/XOmMZmo_p-I/AAAAAAAAAb0/6s0UjSWNjvcMq_5fe44mDa2xER8xtk74ACLcBGAs/s1600/ccc11074d3d2793f2b3df287167a61fb.jpg" alt="">
-</div>
-</div>
-<div class="flex-container">
-    <div>
-<img src="https://images.unsplash.com/photo-1706125473025-0fe75e7b68ca?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMzh8fHxlbnwwfHx8fHw%3D" alt="">
-    </div>
-    <div>
-<img src="
+    <label for="email_address">Email Address:</label>
+    <input type="email" name="email_address" required><br>
 
+    <label for="password">Password:</label>
+    <input type="password" name="password" required><br>
 
+    <label for="confirm_password">Confirm Password:</label>
+    <input type="password" name="confirm_password" required><br>
 
+    <button class="submit">Register!</button>
+</form>
 
-https://th.bing.com/th/id/OIP.JbAXtGQ-sTww685mjIrQtgHaEK?rs=1&pid=ImgDetMain" alt="">
-    </div>
-    <div>
-<img src="https://th.bing.com/th/id/OIP.9zPgbyPykT5t1GL2XYcqqAHaHa?rs=1&pid=ImgDetMain" alt="">
-    </div>  
-    <div>
-<img src="https://wallpapercave.com/wp/wp4941652.jpg" alt="">
-    </div>
-
-</div>
-<div class="flex-container">
-    <div>
-<img src="https://i.pinimg.com/originals/e6/e6/f7/e6e6f7a34642295e80dc40dbd63a4025.jpg" alt="">
-    </div>
-    <div>
-<img src="https://i.pinimg.com/originals/0c/ce/7b/0cce7b884bb5105a99c713045b3f5dc7.jpg" alt="">
-    </div>
-    <div>
-<img src="https://th.bing.com/th/id/OIP.xyuGXxhF1Q7tKEspFhgtTwAAAA?rs=1&pid=ImgDetMain" alt="">
-    </div>  
-    <div>
-<img src="https://i.pinimg.com/736x/a1/71/91/a1719100dd12a2060455d4dceda99b57.jpg" alt="">
-    </div>
-   <div>
-    <img src="https://i.pinimg.com/originals/29/bc/72/29bc72cc34fe2b8c2e53c896fba2e54e.jpg" alt="">
-   </div>
-   <div>
-    <img src="https://i.pinimg.com/originals/85/34/89/8534897d27216e6f0c79265c77cc2013.jpg" alt="">
-   </div>
-<p> <em></em> <em></em>.</p>
-
-</p>
+<script>
+    function calculateAge() {
+        var today = new Date();
+        var birthDate = new Date(document.getElementById("birthdate").value);
+        var age = today.getFullYear() - birthDate.getFullYear();
+        var monthDiff = today.getMonth() - birthDate.getMonth();
+        
+        if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+            age--;
+        }
+        
+        document.getElementById("age").value = age;
+    }
+    </script>
+</script>
 
 </body>
 </html>
